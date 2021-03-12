@@ -15,10 +15,10 @@ import shutil
 import sys
 
 from version import __version__
-from libsigma import Checkm, GenomeRna, Hm2, MaClassifier, MaFasta, Prokka, RefFastaSet, TwoFasta
+from libmetasag import Checkm, GenomeRna, Hm2, MaClassifier, MaFasta, Prokka, RefFastaSet, TwoFasta
 
 DEFAULT_BDIR = 'sgbin'
-DEFAULT_GDIR = 'sigma'
+DEFAULT_GDIR = 'metasag'
 DEFAULT_MDIR = 'intermediate'
 DEFAULT_HM2 = None
 DEFAULT_CPU = 1
