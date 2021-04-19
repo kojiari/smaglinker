@@ -1,6 +1,6 @@
-SIGMA
+MetaSAG
 ------
-SIGMA is bioinformatic tool that can integrate single amplified genome (SAG) and metagenome to reconstruct qualified microbial genomes.
+MetaSAG is bioinformatic tool that can integrate single amplified genome (SAG) and metagenome to reconstruct qualified microbial genomes.
 
 Table of Contents
 ------
@@ -13,7 +13,7 @@ Table of Contents
 
 Requirements
 ------
-SIGMA is written by python3. It requires the following to run:
+MetaSAG is written by python3. It requires the following to run:
 
   * python (>= 3.7.6)
   * BWA (>= 0.7.17)
@@ -22,18 +22,18 @@ SIGMA is written by python3. It requires the following to run:
   * CheckM (>= 1.1.2)
   * HaploMerger2 (>= 20180603)
 
-In addition, SIGMA requires the following Python libraries:
+In addition, MetaSAG requires the following Python libraries:
 
   * pysam (>= 0.15.4)
 
 Installation
 ------
 
-* Download the packages from https://github.com/kojiari/sigma and grant permission to run SIGMA.
+* Download the packages from https://github.com/kojiari/metasag and grant permission to run MetaSAG.
 ```
-git clone https://github.com/kojiari/sigma
-cd sigma
-chmod a+x sigma.py
+git clone https://github.com/kojiari/metasag
+cd metasag
+chmod a+x metasag.py
 
 ```
 
@@ -47,7 +47,7 @@ Usage
 ### 1. Binning
 ```
 // example
-sigma.py binning -o sgbin/ example/mock-ma.fasta example/mock-sag*.fasta
+metasag.py binning -o sgbin/ example/mock-ma.fasta example/mock-sag*.fasta
 ```
 
 Metagenome assembly (e.g. example/mock-ma.fasta) is classified to single-cell genome-guided bin (sgBin) by mapping on reference SAGs (e.g. example/mock-sag*.fasta).
@@ -55,9 +55,9 @@ Metagenome assembly (e.g. example/mock-ma.fasta) is classified to single-cell ge
 ### 2. Merge
 ```
 // example
-sigma.py merge -o merged_genome/mock-sag01 example/mock-sag01.fasta sgbin/mock-sag01.fasta
-sigma.py merge -o merged_genome/mock-sag02 example/mock-sag02.fasta sgbin/mock-sag02.fasta
-sigma.py merge -o merged_genome/mock-sag02 example/mock-sag03.fasta sgbin/mock-sag03.fasta
+metasag.py merge -o merged_genome/mock-sag01 example/mock-sag01.fasta sgbin/mock-sag01.fasta
+metasag.py merge -o merged_genome/mock-sag02 example/mock-sag02.fasta sgbin/mock-sag02.fasta
+metasag.py merge -o merged_genome/mock-sag02 example/mock-sag03.fasta sgbin/mock-sag03.fasta
 ```
 
 Paired SAGs (e.g. example/mock-sag01.fasta) and sgBins (e.g. sgbin/mock-sag01.fasta) are merged to single-cell genome-guided MAG (sgMAG) or metagenome-guided SAG (mgSAG).
@@ -102,4 +102,4 @@ Examples are the mock microbial community (Cell-Mock-001) obtained from the Nati
 
 License
 ------
-SIGMA is licensed under the  LGPL-2.1 License.
+MetaSAG is licensed under the  LGPL-2.1 License.
