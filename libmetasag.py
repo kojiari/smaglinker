@@ -89,10 +89,11 @@ class Hm2:
     def remove_intermediate(self):
         shutil.rmtree(self.merge_dir)
 
-    def run(self, gzfasta, cpu=1):
+    def run(self, fasta, cpu=1):
         copy_tree(self.hm2_bin, self.merge_bin)
         copy_tree(self.hm2_template, self.merge_work)
-        shutil.copy(gzfasta, self.asm)
+        with open(fasta, 'rb') as fh, gzip.open(self.asm, 'wb') as fo:
+            shutil.copyfileobj(fh, fo)
         cdir = os.getcwd()
         os.chdir(self.merge_work)
         #-- confiture --#
