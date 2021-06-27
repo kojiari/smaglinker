@@ -1,6 +1,6 @@
-MetaSAG
+SMAGLinker
 ------
-MetaSAG is bioinformatic tool that can integrate single amplified genome (SAG) and metagenome to reconstruct qualified microbial genomes.
+SMAGLinker is bioinformatic tool that can integrate single amplified genome (SAG) and metagenome to reconstruct qualified microbial genomes.
 
 Table of Contents
 ------
@@ -13,7 +13,7 @@ Table of Contents
 
 Requirements
 ------
-MetaSAG is written by python3. It requires the following to run:
+SMAGLinker is written by python3. It requires the following to run:
 
   * python (>= 3.7.6)
   * BWA (>= 0.7.17)
@@ -22,14 +22,14 @@ MetaSAG is written by python3. It requires the following to run:
   * CheckM (>= 1.1.2)
   * HaploMerger2 (>= 20180603)
 
-In addition, MetaSAG requires the following Python libraries:
+In addition, SMAGLinker requires the following Python libraries:
 
   * pysam (>= 0.15.4)
 
 Installation
 ------
 
-* Download the packages from https://github.com/kojiari/metasag and grant permission to run MetaSAG.
+* Download the packages from https://github.com/kojiari/metasag and grant permission to run SMAGLinker.
 ```
 git clone https://github.com/kojiari/metasag
 cd metasag
@@ -102,4 +102,4 @@ Examples are the mock microbial community (Cell-Mock-001) obtained from the Nati
 
 License
 ------
-MetaSAG is licensed under the  LGPL-2.1 License.
+SMAGLinker is licensed under the  LGPL-2.1 License.

@@ -15,10 +15,10 @@ import shutil
 import sys
 
 from version import __version__
-from libmetasag import Checkm, GenomeRna, Hm2, MaClassifier, MaFasta, Prokka, RefFastaSet, TwoFasta
+from libsmaglinker import Checkm, GenomeRna, Hm2, MaClassifier, MaFasta, Prokka, RefFastaSet, TwoFasta
 
 DEFAULT_BDIR = 'sgbin'
-DEFAULT_GDIR = 'metasag'
+DEFAULT_GDIR = 'smaglinker'
 DEFAULT_MDIR = 'intermediate'
 DEFAULT_HM2 = None
 DEFAULT_CPU = 1
@@ -96,13 +96,13 @@ def opt_min_length(op):
                     default=DEFAULT_MLEN, type=int,
                     metavar='INT', help='minimum length of metagenome assembly, default: {}'.format(DEFAULT_MLEN))
 def opt_min_master_length(op):
-    op.add_argument('--min-master', action='store', dest='mlen',
+    op.add_argument('--min-primary', action='store', dest='mlen',
                     default=DEFAULT_MLEN, type=int,
-                    metavar='INT', help='minimum length of master assembly, default: {}'.format(DEFAULT_MLEN))
+                    metavar='INT', help='minimum length of primary assembly, default: {}'.format(DEFAULT_MLEN))
 def opt_min_slave_length(op):
-    op.add_argument('--min-slave', action='store', dest='slen',
+    op.add_argument('--min-scondary', action='store', dest='slen',
                     default=DEFAULT_SLEN, type=int,
-                    metavar='INT', help='minimum length of slave assembly, default: {}'.format(DEFAULT_SLEN))
+                    metavar='INT', help='minimum length of secondary assembly, default: {}'.format(DEFAULT_SLEN))
 def opt_output(op, default_dir):
     op.add_argument('-o', '--output-dir', action='store', dest='odir',
                     default=default_dir, type=str,
