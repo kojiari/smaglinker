@@ -29,11 +29,11 @@ In addition, SMAGLinker requires the following Python libraries:
 Installation
 ------
 
-* Download the packages from https://github.com/kojiari/metasag and grant permission to run SMAGLinker.
+* Download the packages from https://github.com/kojiari/smaglinker and grant permission to run SMAGLinker.
 ```
-git clone https://github.com/kojiari/metasag
-cd metasag
-chmod a+x metasag.py
+git clone https://github.com/kojiari/smaglinker
+cd smaglinker
+chmod a+x smaglinker.py
 
 ```
 
@@ -47,7 +47,7 @@ Usage
 ### 1. Binning
 ```
 // example
-metasag.py binning -o sgbin/ example/mock-ma.fasta example/mock-sag*.fasta
+smaglinker.py binning -o sgbin/ example/mock-ma.fasta example/mock-sag*.fasta
 ```
 
 Metagenome assembly (e.g. example/mock-ma.fasta) is classified to single-cell genome-guided bin (sgBin) by mapping on reference SAGs (e.g. example/mock-sag*.fasta).
@@ -55,9 +55,9 @@ Metagenome assembly (e.g. example/mock-ma.fasta) is classified to single-cell ge
 ### 2. Merge
 ```
 // example
-metasag.py merge -o merged_genome/mock-sag01 example/mock-sag01.fasta sgbin/mock-sag01.fasta
-metasag.py merge -o merged_genome/mock-sag02 example/mock-sag02.fasta sgbin/mock-sag02.fasta
-metasag.py merge -o merged_genome/mock-sag02 example/mock-sag03.fasta sgbin/mock-sag03.fasta
+smaglinker.py merge -o merged_genome/mock-sag01 example/mock-sag01.fasta sgbin/mock-sag01.fasta
+smaglinker.py merge -o merged_genome/mock-sag02 example/mock-sag02.fasta sgbin/mock-sag02.fasta
+smaglinker.py merge -o merged_genome/mock-sag02 example/mock-sag03.fasta sgbin/mock-sag03.fasta
 ```
 
 Paired SAGs (e.g. example/mock-sag01.fasta) and sgBins (e.g. sgbin/mock-sag01.fasta) are merged to single-cell genome-guided MAG (sgMAG) or metagenome-guided SAG (mgSAG).
